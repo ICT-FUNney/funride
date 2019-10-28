@@ -9,6 +9,9 @@ class GoogleMap extends Component {
         zoom = { 14 }
         center = {{ lat: 35.681236, lng: 139.767125 }}
         initialCenter = {{ lat: 35.681236, lng: 139.767125 }}
+        mapTypeControl ={false}
+        zoomControl={true}
+        streetViewControl={false}
       >
         <Marker
           title = { "現在地" }

@@ -6,9 +6,12 @@ import Fab from '@material-ui/core/Fab';
 import Typography from '@material-ui/core/Typography';
 import PlayArrowOutlinedIcon from '@material-ui/icons/PlayArrowOutlined';
 import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
+import Menu from "./Menu";
 //import { GoogleApiWrapper } from 'google-maps-react';
 
 class App extends Component {
+
+
   constructor(props) {
     super(props);
     this.state = {powerOn: false, speed: 0}
@@ -35,7 +38,7 @@ class App extends Component {
 
   render() {
     return (
-      <GoogleApiWrapper />
+      <Menu/>
     );
   }
 }
