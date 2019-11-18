@@ -1,0 +1,115 @@
+*{
+    background-color: #E5E5E5;
+}
+
+.h1{
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 24px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    display: inline;
+    text-align: center;
+    
+    background: #49BAEB;
+    color: #FFFFFF;    
+}
+
+.a{
+    color: black; 
+    text-decoration: none;
+}
+
+.li{
+    background-color: #ffff;
+    list-style: none;
+    margin: 8px;
+}
+
+.list{
+    position: absolute;
+    width: 444px;
+    height: 135px;
+    left: 20px;
+    top: 93px;
+    padding: 5px;
+    margin: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.list2{
+    position: absolute;
+    width: 444px;
+    height: 135px;
+    left: 20px;
+    top: 255px;
+    padding: 5px;
+    margin: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.list3{
+    position: absolute;
+    width: 444px;
+    height: 135px;
+    left: 20px;
+    top: 417px;
+    padding: 5px;
+    margin: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.list4{
+    position: absolute;
+    width: 444px;
+    height: 135px;
+    left: 20px;
+    top: 581px;
+    padding: 5px;
+    margin: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.listDetail{
+    position: absolute;
+    width: 424px;
+    height: 135px;
+    left: 15px;
+    top: 508px;
+    padding: 15px;
+    margin: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.detailMap{
+ position: absolute;
+ top: 75px;
+ height: 662px;
+ width: 100%;
+ left: 0px;
+}

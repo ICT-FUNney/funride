@@ -6,6 +6,7 @@ import Fab from '@material-ui/core/Fab';
 import Typography from '@material-ui/core/Typography';
 import PlayArrowOutlinedIcon from '@material-ui/icons/PlayArrowOutlined';
 import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
+import Request from "./components/RequestPage";
 import Menu from "./Menu";
 //import { GoogleApiWrapper } from 'google-maps-react';
 
