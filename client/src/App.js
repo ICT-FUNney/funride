@@ -8,18 +8,24 @@ import PlayArrowOutlinedIcon from '@material-ui/icons/PlayArrowOutlined';
 import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
 import Menu from "./Menu";
 //import { GoogleApiWrapper } from 'google-maps-react';
+import Login from './components/Login';
+import GoogleMap from './components/GoogleMap';
+import Request from './components/Request';
+import SetPay from './components/SetPay';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 class App extends Component {
 
 
   constructor(props) {
     super(props);
-    this.state = {powerOn: false, speed: 0}
+    this.state = { powerOn: false, speed: 0 }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.setState({
-      powerOn:false
+      powerOn: false
     })
   }
 
@@ -31,14 +37,21 @@ class App extends Component {
       speed: connectionInfo.downlink
     })
 
-    const changeFunc = (e) => this.state.powerOn && this.setState({speed: e.target.downlink})
+    const changeFunc = (e) => this.state.powerOn && this.setState({ speed: e.target.downlink })
 
     navigator.connection.onchange = changeFunc;
   }
 
   render() {
     return (
-      <Menu/>
+      <Router>
+        <Switch>
+          <Route exact path='/login' component={Login} />
+          <Route path='/map' component={GoogleMap} />
+          <Route path='/request' component={Request} />
+          <Route path='/pay' component={SetPay} />
+        </Switch>
+      </Router>
     );
   }
 }
