@@ -1,25 +1,26 @@
 
 import React, { Component } from 'react';
-import GoogleApiWrapper from './components/GoogleMap';
 import 'typeface-roboto';
-import Fab from '@material-ui/core/Fab';
-import Typography from '@material-ui/core/Typography';
-import PlayArrowOutlinedIcon from '@material-ui/icons/PlayArrowOutlined';
-import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
-import Menu from "./Menu";
 //import { GoogleApiWrapper } from 'google-maps-react';
+import Login from './components/Login';
+import GoogleMap from './components/GoogleMap';
+import Request from './components/Request';
+import SetPay from './components/SetPay';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import RequestList from './components/RequestList';
+
 
 class App extends Component {
 
 
   constructor(props) {
     super(props);
-    this.state = {powerOn: false, speed: 0}
+    this.state = { powerOn: false, speed: 0 }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.setState({
-      powerOn:false
+      powerOn: false
     })
   }
 
@@ -31,14 +32,22 @@ class App extends Component {
       speed: connectionInfo.downlink
     })
 
-    const changeFunc = (e) => this.state.powerOn && this.setState({speed: e.target.downlink})
+    const changeFunc = (e) => this.state.powerOn && this.setState({ speed: e.target.downlink })
 
     navigator.connection.onchange = changeFunc;
   }
 
   render() {
     return (
-      <Menu/>
+      <Router>
+        <Switch>
+          <Route exact path='/login' component={Login} />
+          <Route path='/map' component={GoogleMap} />
+          <Route path='/request' component={RequestList} />
+          <Route path='/pay' component={SetPay} />
+          <Route path='/detail' component={Request} />
+        </Switch>
+      </Router>
     );
   }
 }
