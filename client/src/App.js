@@ -8,6 +8,9 @@ import Request from './components/Request';
 import SetPay from './components/SetPay';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RequestList from './components/RequestList';
+import SignUp from './components/SignUp';
+import './Signup.css';
+import './Login.css';
 
 
 class App extends Component {
@@ -46,6 +49,7 @@ class App extends Component {
           <Route path='/request' component={RequestList} />
           <Route path='/pay' component={SetPay} />
           <Route path='/detail' component={Request} />
+          <Route path = '/signup' component = {SignUp} />
         </Switch>
       </Router>
     );
