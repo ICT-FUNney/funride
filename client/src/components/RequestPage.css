@@ -1,0 +1,122 @@
+*{
+    background-color: #E5E5E5;
+    margin:0px;
+}
+
+.h1{
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 24px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    
+    display: inline;
+    text-align: center;
+    
+    background: #49BAEB;
+    color: #FFFFFF;    
+}
+
+.li{
+    list-style: none;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.state{
+    position: absolute;
+    left: 299px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.list1{
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    left: 0px;
+    top: 75px;
+    padding: 15px 15px 15px 0px;
+    margin: 15px;
+
+    font-size: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.list2{
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    left: 0px;
+    top: 228px;
+    padding: 15px 15px 15px 0px;
+    margin: 15px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.list3{
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    left: 0px;
+    top: 378px;
+    padding: 15px 15px 15px 0px;
+    margin: 15px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.list4{
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    left: 0px;
+    top: 528px;
+    padding: 15px 15px 15px 0px;
+    margin: 15px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.detail{
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    left: 0px;
+    top: 582px;
+    padding: 15px 15px 15px 0px;
+    margin: 15px;
+
+    font-size: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
