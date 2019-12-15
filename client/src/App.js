@@ -8,6 +8,8 @@ import Request from './components/Request';
 import SetPay from './components/SetPay';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RequestList from './components/RequestList';
+import Header from './components/Header';
+import MapContainer from './components/MapContainer';
 
 
 class App extends Component {
@@ -40,9 +42,10 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Header/>
         <Switch>
           <Route exact path='/login' component={Login} />
-          <Route path='/map' component={GoogleMap} />
+          <Route path='/map' component={MapContainer} />
           <Route path='/request' component={RequestList} />
           <Route path='/pay' component={SetPay} />
           <Route path='/detail' component={Request} />

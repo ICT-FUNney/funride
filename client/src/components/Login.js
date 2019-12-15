@@ -11,7 +11,7 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
+            <div className="login-container">
                 <div className="font1" >funride</div>
                 <div className="form-wrapper1">
                     <form>
