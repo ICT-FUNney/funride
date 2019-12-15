@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RequestList from './components/RequestList';
 import Header from './components/Header';
 import MapContainer from './components/MapContainer';
+import Information from './components/Information';
 
 
 class App extends Component {
@@ -49,6 +50,7 @@ class App extends Component {
           <Route path='/request' component={RequestList} />
           <Route path='/pay' component={SetPay} />
           <Route path='/detail' component={Request} />
+          <Route path='/information' component={Information}/>
         </Switch>
       </Router>
     );

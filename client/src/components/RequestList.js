@@ -1,43 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import GoogleApiWrapper from './GoogleMap';
-
-const detailPage1 = () =>
-    <div>
-        <h1 className="h1">詳細画面</h1>
-        <div className="detailMap"><GoogleApiWrapper /></div>
-        <ul className="listDetail">
-            <li className="li">高橋啓太</li>
-            <li className="li">2019‐10‐15 08:04:09</li>
-            <li className="li">北海道函館市hogehohe</li>
-            <li className="li">函館空港、〒042‐052 北海道函館市5 11</li>
-        </ul>
-    </div>
-
-const detailPage2 = () =>
-    <div>
-        <h1 className="h1">詳細画面</h1>
-        <div className="detailMap"><GoogleApiWrapper /></div>
-        <ul className="listDetail">
-            <li className="li">渡邊雄之助</li>
-            <li className="li">2019‐10‐10 07:08:09</li>
-            <li className="li">北海道函館市hogehohe</li>
-            <li className="li">函館空港、〒042‐052 北海道函館市5 11</li>
-        </ul>
-    </div>
-
-const detailPage3 = () =>
-    <div>
-        <h1 className="h1">詳細画面</h1>
-        <div className="detailMap"><GoogleApiWrapper /></div>
-        <ul className="listDetail">
-            <li className="li">田尻宗準</li>
-            <li className="li">2019‐09‐15 10:04:09</li>
-            <li className="li">北海道函館市hogehohe</li>
-            <li className="li">函館空港、〒042‐052 北海道函館市5 11</li>
-        </ul>
-    </div>
-
+import './RequestPage.css';
 
 class RequestList extends Component {
     constructor(props) {
@@ -50,34 +12,37 @@ class RequestList extends Component {
     render() {
         return (
             <div>
-                <h1 className="h1">依頼一覧</h1>
-
-
-                <ul className="list">
-                    <li className="li" onClick={this.transit}>
-                        高橋啓太<br />
-                        2019‐10‐15 08:04:09<br />
-                        北海道函館市hogehohe<br />
-                        函館空港、〒042‐052 北海道函館市5 11<br />
-                    </li>
-                    <li className="li" onClick={this.transit}>
-                        渡邊雄之助<br />
-                        2019‐10‐15 08:04:09<br />
-                        北海道函館市hogehohe<br />
-                        函館空港、〒042‐052 北海道函館市5 11<br />
-                    </li>
-                    <li className="li" onClick={this.transit}>
-                        田尻宗準<br />
-                        2019‐10‐15 08:04:09<br />
-                        北海道函館市hogehohe<br />
-                        函館空港、〒042‐052 北海道函館市5 11<br />
-                    </li>
-                    <li className="li" onClick={this.transit}>
-                        若林勇汰<br />
-                        2019‐10‐15 08:04:09<br />
-                        北海道函館市hogehohe<br />
-                        函館空港、〒042‐052 北海道函館市5 11<br />
-                    </li>
+                <ul className="li-container">
+                  <li className="list" onClick={this.transit}>
+                    <span style={{background:"#ffffff",margin:"15px"}}>高橋啓太</span><span className="state">保留中</span><br />
+                    <img width="13" height="13" style={{background:"#ffffff",margin:"0px 7px"}} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
+                    <span style={{background:"#ffffff",color: "#A2DEE2",margin:"0px 5px"}}>●</span>北海道函館市hogehohe<br />
+                    <span style={{background:"#ffffff",color: "#FD7E00",margin:"0px 5px"}}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />                        
+                  </li>
+                  <li className="list" onClick={this.transit}>
+                    <span style={{background:"#ffffff",margin:"15px"}}>渡邊雄之助</span><span className="state">完了済み</span><br />
+                    <img width="13" height="13" style={{background:"#ffffff",margin:"0px 7px"}} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
+                    <span style={{background:"#ffffff",color: "#A2DEE2",margin:"0px 5px"}}>●</span>北海道函館市hogehohe<br />
+                    <span style={{background:"#ffffff",color: "#FD7E00",margin:"0px 5px"}}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
+                  </li>
+                  <li className="list" onClick={this.transit}>
+                    <span style={{background:"#ffffff",margin:"15px"}}>田尻宗準</span><span className="state">完了済み</span><br />
+                    <img width="13" height="13" style={{background:"#ffffff",margin:"0px 7px"}} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
+                    <span style={{background:"#ffffff",color: "#A2DEE2",margin:"0px 5px"}}>●</span>北海道函館市hogehohe<br />
+                    <span style={{background:"#ffffff",color: "#FD7E00",margin:"0px 5px"}}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
+                  </li>
+                  <li className="list" onClick={this.transit}>
+                    <span style={{background:"#ffffff",margin:"15px"}}>若林勇汰</span><span className="state">完了済み</span><br />
+                    <img width="13" height="13" style={{background:"#ffffff",margin:"0px 7px"}} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
+                    <span style={{background:"#ffffff",color: "#A2DEE2",margin:"0px 5px"}}>●</span>北海道函館市hogehohe<br />
+                    <span style={{background:"#ffffff",color: "#FD7E00",margin:"0px 5px"}}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
+                  </li>
+                  <li className="list" onClick={this.transit}>
+                    <span style={{background:"#ffffff",margin:"15px"}}>濁川沼吉</span><span className="state">完了済み</span><br />
+                    <img width="13" height="13" style={{background:"#ffffff",margin:"0px 7px"}} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
+                    <span style={{background:"#ffffff",color: "#A2DEE2",margin:"0px 5px"}}>●</span>北海道函館市hogehohe<br />
+                    <span style={{background:"#ffffff",color: "#FD7E00",margin:"0px 5px"}}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
+                  </li>
                 </ul>
 
             </div>
