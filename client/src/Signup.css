@@ -1,20 +1,19 @@
 
-
-.form-wrapper1 {
+.form-wrapper2 {
 background: #49baeb;
 margin: 3em auto;
 padding: 0 1em;
 max-width: 370px;
 }
 
-.font1 {
+.font2 {
   color:#ffffff;
   font-size: 10ex;
   text-align: center;
   top: 10%;
 }
 
-.form-item1 input{
+.form-item2 input{
   border: none;
   background:#49baeb;
   border-bottom: 2px solid #afb3ee;
@@ -25,12 +24,12 @@ max-width: 370px;
   font-size: 15px;
 }
 
-.form-item1 input:focus {
+.form-item2 input:focus {
   border-bottom: 2px solid #ffffff;
   outline:none;
 }
 
-.button-lay1{
+.button-lay4{
 background-color: #49baeb;
 color: #ffffff;
 text-align: center;
@@ -41,11 +40,13 @@ left: center;
 top:410px;
 }
 
-.button-lay2{
+.button-lay3{
 background-color: #ffffff;
 color: #49baeb;
 text-align: center;
-width: 120px;
+width: 370px;
 height: 40px;
-
+position: absolute;
+left: center;
+top:470px;
 }

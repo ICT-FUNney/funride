@@ -101,11 +101,11 @@ class Header extends Component {
                                             className={classes.large}
                                             style={this.avatarStyle} />
 
-                                        <Typography 
-                                        gutterBottom 
-                                        variant="h5" 
-                                        component="h2" 
-                                        style={this.nameStyle}>
+                                        <Typography
+                                            gutterBottom
+                                            variant="h5"
+                                            component="h2"
+                                            style={this.nameStyle}>
                                             高橋啓太
                                         </Typography>
                                     </div>
@@ -113,7 +113,7 @@ class Header extends Component {
                                 </div>
                             </Drawer>
                             <strong>
-                                <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'Montserrat, sans-serif', }}>funride</Link>
+                                <Link to="/map" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'Montserrat, sans-serif', }}>funride</Link>
                             </strong>
                         </Toolbar>
                     </AppBar>

@@ -1,6 +1,15 @@
-import {React, Component} from "react";
+import React, { Component } from "react";
+import { Button } from "@material-ui/core";
 
 class SetPay extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+
+    transit = () => {
+        this.props.history.push('/driver')
+    }
     render() {
         return (
             <div>
@@ -15,7 +24,9 @@ class SetPay extends Component {
                         <input type="form" name="ID" className="form_SetPay" required="required" autocomplete="off" placeholder="送り先ID"></input>
                     </div>
                     <div className="send_SetPay">
-                        <input type="submit" name="send_setpay" value="確定"></input>
+                        <Button variant="contained" color="primary" onClick={this.transit}>
+                            決定
+                        </Button>
                     </div>
                 </form>
             </div>

@@ -40,7 +40,7 @@ class MapContainer extends Component {
     }
 
     transit = () => {
-        this.props.history.push('/request')
+        this.props.history.push('/pay')
     }
 
     render() {
