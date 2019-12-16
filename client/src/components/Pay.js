@@ -2,8 +2,10 @@
 import React, { Component } from 'react';
 import './RequestPage.css';
 import GoogleMap from './GoogleMap';
+import { Button } from '@material-ui/core';
+import { sendApi } from '../api/Send';
 
-class Request extends Component {
+class Pay extends Component {
     constructor(props) {
         super(props)
         this.containerStyle = {
@@ -20,6 +22,19 @@ class Request extends Component {
             transform: "translateX(-50%)",
             background: "#FFFFFF"
         };
+        this.buttonStyle = {
+            position: "absolute",
+            bottom: "10%",
+            left: "40%"
+        }
+    }
+    transit = () => {
+        sendApi({
+            balance: 2,
+            id: this.props.id,
+            dest_id: "b1000000"
+        })
+        this.props.history.push('/map')
     }
 
     render() {
@@ -28,19 +43,23 @@ class Request extends Component {
 
                 <GoogleMap />
                 <ul className="li-container">
-                    <li className="detail">
-                        <span style={{ background: "#ffffff", margin: "15px" }}>高橋啓太</span><br />
-                        <img width="13" height="13" style={{ background: "#ffffff", margin: "0px 7px" }} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
-                        <span style={{ background: "#ffffff", color: "#A2DEE2", margin: "0px 5px" }}>●</span>北海道函館市hogehohe<br />
-                        <span style={{ background: "#ffffff", color: "#FD7E00", margin: "0px 5px" }}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
+                    <li className="pay">
+                        合計：９９９ Funny
                     </li>
                 </ul>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    style={this.buttonStyle}
+                    onClick={this.transit}>
+                    支払い
+                </Button>
 
-            
+
             </div>
 
         );
     }
 }
 
-export default Request;
+export default Pay;

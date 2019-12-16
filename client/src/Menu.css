@@ -1,0 +1,11 @@
+.form{
+    position: absolute;
+    width: 283px;
+    top: 108px;
+    left: 28px;
+    margin: 0px;
+    padding: 15px;
+
+    background: #fff;
+    border-radius: 50px;
+}

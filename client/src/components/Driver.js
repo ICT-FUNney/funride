@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './RequestPage.css';
 import GoogleMap from './GoogleMap';
 
-class Request extends Component {
+class Driver extends Component {
     constructor(props) {
         super(props)
         this.containerStyle = {
@@ -22,17 +22,21 @@ class Request extends Component {
         };
     }
 
+    transit = () => {
+        this.props.history.push('/paying')
+    }
+
     render() {
         return (
             <div style={this.containerStyle}>
 
                 <GoogleMap />
-                <ul className="li-container">
+                <ul className="li-container" onClick={this.transit}>
                     <li className="detail">
-                        <span style={{ background: "#ffffff", margin: "15px" }}>高橋啓太</span><br />
-                        <img width="13" height="13" style={{ background: "#ffffff", margin: "0px 7px" }} src="https://icooon-mono.com/i/icon_00434/icon_004341_64.png" />2019‐10‐15 08:04:09<br />
-                        <span style={{ background: "#ffffff", color: "#A2DEE2", margin: "0px 5px" }}>●</span>北海道函館市hogehohe<br />
-                        <span style={{ background: "#ffffff", color: "#FD7E00", margin: "0px 5px" }}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
+                        b1016126 高橋啓太<br />
+                        No.　函館130 へ 20-19<br />
+                        ひとこと:<br />
+                        仮免あります。（酒気帯びです)<br />
                     </li>
                 </ul>
 
@@ -43,4 +47,4 @@ class Request extends Component {
     }
 }
 
-export default Request;
+export default Driver;
