@@ -9,6 +9,7 @@ import SetPay from './components/SetPay';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RequestList from './components/RequestList';
 import Information from './components/Information';
+import Reward from './components/Reward';
 
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
           <Route path='/pay' component={SetPay} />
           <Route path='/detail' component={Request} />
           <Route path='/information' component={Information}/>
+          <Route path='/Reward' component={Reward}/>
         </Switch>
       </Router>
     );
