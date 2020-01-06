@@ -16,6 +16,7 @@ import './Signup.css';
 import './Login.css';
 import Driver from './components/Driver';
 import Pay from './components/Pay';
+import './setpay.css'
 
 
 
