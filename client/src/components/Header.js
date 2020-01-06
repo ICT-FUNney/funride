@@ -64,6 +64,11 @@ class Header extends Component {
         const sideList = (
             <div className={classes.list}>
                 <List>
+                    <Link to="/Map">
+                        <ListItem button>
+                            <ListItemText primary="ホーム" />
+                        </ListItem> 
+                    </Link>   
                     <Link to="/request">
                         <ListItem button>
                             <ListItemText primary="依頼一覧" />
