@@ -2,10 +2,29 @@
 import React, { Component } from 'react';
 import './RequestPage.css';
 import GoogleMap from './GoogleMap';
+import { Button } from '@material-ui/core';
+
+function buttonOn(props) {
+    return(
+        <div>
+        <p>
+            引き受ける
+        </p>
+        </div>
+    );
+}
+
+function buttonOff(props) {
+    return false;
+}
 
 class Request extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+         this.handleButtonOnClick = this.handleButtonOnClick.bind(this);
+        /* this.handleButtonOffClick = this.handleButtonOffClick.bind(this); */
+         this.state = {buttonPush : true};
+
         this.containerStyle = {
             position: "absolute",
             width: "100%",
@@ -20,9 +39,29 @@ class Request extends Component {
             transform: "translateX(-50%)",
             background: "#FFFFFF"
         };
+
+        this.buttonStyle = {
+            position: "absolute",
+            bottom: "10%",
+            left: "35%"
+        };
     }
 
+    handleButtonOnClick(){
+        this.setState({buttonPush: false});
+    }         
+    
     render() {
+        
+        const buttonPush = this.state.buttonPush;
+        let button;
+
+        if (buttonPush){
+            button = <buttonOn onClick={this.handleButtonOnClick} />;
+        } else {
+            button = <buttonOff />;
+        }
+
         return (
             <div style={this.containerStyle}>
 
@@ -35,10 +74,10 @@ class Request extends Component {
                         <span style={{ background: "#ffffff", color: "#FD7E00", margin: "0px 5px" }}>●</span>函館空港、〒042‐052 北海道函館市5 11<br />
                     </li>
                 </ul>
-
             
+                <buttonOn/>
+                {button}
             </div>
-
         );
     }
 }

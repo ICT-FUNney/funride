@@ -48,7 +48,7 @@ class Pay extends Component {
                     </li>
                 </ul>
                 <Button
-                    variant="contained"
+                    variant="contained" 
                     color="primary"
                     style={this.buttonStyle}
                     onClick={this.transit}>
